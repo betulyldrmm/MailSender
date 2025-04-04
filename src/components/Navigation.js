@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navigation.css';
 import { FaInstagram, FaTwitter, FaYoutube, FaUser, FaSignOutAlt, FaCog } from "react-icons/fa";
 
-// Import your images for the slider
 import mail1 from './mail1.jpg'; 
 import mail2 from './mail2.jpg';
 import mail3 from './mail3.jpg';
@@ -101,7 +100,7 @@ const Navigation = () => {
         }
     };
 
-    // Slider transition functions
+
     const nextSlide = () => {
         if (isAnimating) return;
         setIsAnimating(true);
@@ -120,31 +119,31 @@ const Navigation = () => {
         }, 50);
     };
 
-    // Function to calculate position classes for images
+   
     const getImageClass = (index) => {
         if (index === activeIndex) return 'active';
         
-        // Images to the left of active index
+       
         if ((index === activeIndex - 1) || (activeIndex === 0 && index === images.length - 1)) {
-            return 'position-1'; // Left side image
+            return 'position-1'; 
         }
         
-        // Images to the right of active index  
+       
         if ((index === activeIndex + 1) || (activeIndex === images.length - 1 && index === 0)) {
-            return 'position-3'; // Right side image
+            return 'position-3'; 
         }
         
-        // Images two positions to the left
+       
         if ((index === activeIndex - 2) || (activeIndex <= 1 && index === images.length - (2 - activeIndex))) {
-            return 'position-2'; // Far left image
+            return 'position-2'; 
         }
         
-        // Images two positions to the right
+        
         if ((index === activeIndex + 2) || (activeIndex >= images.length - 2 && index === (activeIndex + 2) % images.length)) {
-            return 'position-4'; // Far right image
+            return 'position-4';
         }
         
-        return 'inactive'; // Other images
+        return 'inactive'; 
     };
 
     // Function called when login is successful
@@ -209,7 +208,7 @@ const Navigation = () => {
                 </Container>
             </Navbar>
 
-            {/* Remove the duplicate heading in the homepage content */}
+      
             {location.pathname === '/' && !isAuthenticated && (
                 <div className="arkaplan">
                     {/* Image Slider */}
@@ -236,7 +235,7 @@ const Navigation = () => {
                         >&#10095;</button>
                     </div>
 
-                    {/* Login Button */}
+                  
                     <div className="auth-button-container" style={{ 
                         textAlign: 'center', 
                         marginTop: '20px', 
@@ -266,11 +265,11 @@ const Navigation = () => {
                         </div>
                     </div>
 
-                    {/* Flow Chart */}
+                   
                     <div className="flow-container">
-                        {/* Upper row */}
+                      
                         <div className="flow-row">
-                            {/* Box 1 */}
+                          
              <div className="flow-box">
                                 <div className="box-title">Giriş Yapın ya da Üye Olun</div>
                                 <div className="box-content">
@@ -279,7 +278,7 @@ const Navigation = () => {
                                 <div className="arrow-right">➜</div>
                             </div>
                             
-                            {/* Box 2 */}
+                          
                             <div className="flow-box">
                                 <div className="box-title">Yeni Etkinlik Oluşturun</div>
                                 <div className="box-content">
@@ -288,7 +287,7 @@ const Navigation = () => {
                                 <div className="arrow-right">➜</div>
                             </div>
                             
-                            {/* Box 3 */}
+                           
                             <div className="flow-box">
                                 <div className="box-title">Etkinliği Seçin</div>
                                 <div className="box-content">
@@ -298,9 +297,9 @@ const Navigation = () => {
                             </div>
                         </div>
                         
-                        {/* Bottom row */}
+                      
                         <div className="flow-row last-row">
-                            {/* Box 4 */}
+                            
                             <div className="flow-box">
                                 <div className="box-title">Gönderin</div>
                                 <div className="box-content">
@@ -308,7 +307,7 @@ const Navigation = () => {
                                 </div>
                             </div>
                             
-                            {/* Box 5 */}
+                          
                             <div className="flow-box">
                                 <div className="box-title">Gönderen ve Alıcılar Ekleyin</div>
                                 <div className="box-content">
@@ -317,7 +316,7 @@ const Navigation = () => {
                                 <div className="arrow-right">➜</div>
                             </div>
                             
-                            {/* Box 6 */}
+                          
                             <div className="flow-box">
                                 <div className="box-title">Mail Şablonları Oluşturun</div>
                                 <div className="box-content">
@@ -329,7 +328,7 @@ const Navigation = () => {
                 </div>
             )}
 
-            {/* Authenticated User Welcome Message */}
+           
             {isAuthenticated && location.pathname === '/' && (
                 <div className="welcome-container">
                     <div className="welcome-message">
@@ -338,7 +337,7 @@ const Navigation = () => {
                 </div>
             )}
 
-            {/* AuthForm Modal */}
+           
             <Modal 
                 show={showAuthModal} 
                 onHide={() => setShowAuthModal(false)} 
@@ -353,7 +352,7 @@ const Navigation = () => {
                 </Modal.Body>
             </Modal>
 
-            {/* Feedback Modal */}
+          
             <Modal show={showModal} onHide={() => setShowModal(false)} centered>
                 <Modal.Header closeButton>
                     <Modal.Title>{modalTitle}</Modal.Title>
@@ -366,7 +365,7 @@ const Navigation = () => {
                 </Modal.Footer>
             </Modal>
 
-            {/* Only show the line and contact section on homepage when NOT authenticated */}
+        
             {location.pathname === '/' && !isAuthenticated && (
                 <div>
                     <div className="long-line"></div>
