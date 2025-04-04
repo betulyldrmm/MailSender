@@ -1,0 +1,125 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.text-primary { color: #007bff !important; }
+.text-success { color: #28a745 !important; }
+.text-info { color: #17a2b8 !important; }
+.text-warning { color: #ffc107 !important; }
+
+.display-4 {
+    font-size: 3rem;
+}
+
+/* Event card specific styles */
+.event-card {
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Feature card specific styles */
+.feature-card {
+    cursor: pointer;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Color themes */
+.theme-primary { background-color: rgba(0, 123, 255, 0.1); }
+.theme-success { background-color: rgba(40, 167, 69, 0.1); }
+.theme-info { background-color: rgba(23, 162, 184, 0.1); }
+.theme-warning { background-color: rgba(255, 193, 7, 0.1); }
+
+/* Operation card styles */
+.operation-card {
+    transition: all 0.3s ease;
+}
+
+.operation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.operation-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.operation-card:hover .operation-icon {
+    transform: scale(1.1);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container button {
+  margin-top: -20px; /* Butonu yukarı taşır */
+  position: relative;
+  z-index: 10; /* Butonun diğer elementlerin üzerinde görünmesini sağlar */
+}
+
+/* Alternatif olarak, butonu tamamen navbar'a taşımak isterseniz */
+.container button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}

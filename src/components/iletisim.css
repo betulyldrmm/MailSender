@@ -1,0 +1,69 @@
+.about-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; /* Açık gri-mavi arka plan */
+  }
+  
+  /* Navbar stili */
+  .about-page .custom-navbar {
+    background-color:#152d52;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+  }
+  
+  .about-page .custom-navbar-brand {
+    font-weight: bold;
+  }
+  
+  /* Ana içerik konteyner */
+  .about-container {
+    flex: 1;
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .about-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 15px;
+    color: #1e3a8a; /* Koyu mavi başlık */
+  }
+  
+  .about-content {
+    text-align: left;
+  }
+  
+  .about-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: black;
+  }
+  
+  .about-content h2 {
+    font-size: 1.8rem;
+    margin: 25px 0 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+    color: #1e3a8a; /* Koyu mavi alt başlık */
+  }
+  
+  .about-page .nav-item {
+    color: #1e3a8a;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .about-page .nav-item:hover {
+    color: #2563eb;
+  }

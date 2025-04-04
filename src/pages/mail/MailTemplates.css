@@ -1,0 +1,45 @@
+/* MailTemplates.css */
+.card {
+    min-width: 250px;
+    margin-bottom: 15px;
+  }
+  
+  .card-body {
+    padding: 1.25rem;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-text {
+    min-height: 60px;
+  }
+
+  /* MailTemplates.css */
+.row-cols-md-2 > .col:nth-child(odd) {
+  clear: left;
+}
+
+.row-cols-lg-3 > .col:nth-child(3n+1) {
+  clear: left;
+}
+
+.card {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
